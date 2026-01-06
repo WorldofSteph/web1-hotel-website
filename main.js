@@ -37,7 +37,12 @@ navLinks.forEach(link => {
     });
 
     // If the link's href matches the current path
-    if (currentPath.endsWith(link.getAttribute('href')) || link.href === window.location.href) {
+    // NOTE: special case for when visiting the site root, ending with "/"
+    if (currentPath.endsWith("/") && link.getAttribute('href').endsWith("index.html")) {
+        link.setAttribute("aria-current", "page");
+        // Set mobile current page header
+        mobileCurrentPageHeader.innerText = getPathnameTitle("/");
+    } else if (currentPath.endsWith(link.getAttribute('href')) || link.href === window.location.href) {
         link.setAttribute("aria-current", "page");
         // Set mobile current page header
         mobileCurrentPageHeader.innerText = getPathnameTitle(link.getAttribute('href'));
