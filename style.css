@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Verdana, sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 128px;
+
+  background-image: url("gallery/header-forest.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  max-width: 1800px;
+  margin: 1rem auto;
+  height: 4rem;
+  background-color: #0a5f38;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-menu {
+  z-index: 10;
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+
+.navbar-link:hover {
+  border-radius: 4px;
+  background-color: #aed0c1;
+  color: black;
+  text-decoration: underline;
+}
+
+.navbar-link[aria-current="page"] {
+  background-color: #d1dfd8;
+  color: black;
+}
+
+/* Hamburger Icon Styling */
+.hamburger {
+  margin: 1rem;
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+#mobile-current-page-header {
+  display: none; /* Hidden on desktop */
+  margin-left: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+.main {
+  margin: 1rem auto;
+  max-width: 1800px;
+  display: flex;
+  gap: 2rem;
+}
+
+.article {
+  flex: 1;
+  border-radius: 4px;
+  background-color: rgb(10 95 56 / 20%);
+  padding: 1.5rem;
+}
+
+.article-header {
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-paragraph {
+  margin-bottom: 1rem;
+}
+
+.article-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer {
+  margin: 1rem auto;
+  max-width: 1800px;
+  border-radius: 4px;
+  background-color: rgb(10 95 56 / 20%);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.form-row-right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 0.5rem;
+}
+
+.form-label {
+  min-width: 8rem;
+}
+
+.form-input {
+  flex: 1;
+  height: 2.5rem;
+}
+
+.form-select {
+  /* For Safari */
+  -webkit-appearance: none;
+  appearance: none;
+  
+  flex: 1;
+  height: 2.5rem;
+}
+
+.form-textarea {
+  height: 12.5rem;
+  flex: 1;
+}
+
+.form-submit {
+  min-width: 8rem;
+  height: 2.5rem;
+}
+
+.article-list {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.article-list-item {
+  margin-bottom: 1rem;
+}
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 1. Desktop Styles (Default) */
+.grid-container {
+  display: grid;
+  /* 2x2 grid */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+
+}
+
+.grid-item {
+  background-color: rgb(10 95 56 / 20%);
+  padding: 2rem;
+  border-radius: 4px;
+  display: flex;
+}
+
+.grid-item-text-container {
+    flex: 1;
+    margin-left: 1.25rem;
+}
+
+.grid-item-text-heading {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.grid-item-text-paragraph {
+    font-size: 0.75rem;
+}
+
+/* Mobile */
+@media (max-width: 750px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  #mobile-current-page-header {
+    display: block; /* Show current page header on mobile */
+  }
+
+  .nav-menu {
+    width: 100%;
+    position: absolute;
+    left: -100%; /* Hide menu off-screen */
+    top: 13rem;
+    padding: 2rem 0;
+    flex-direction: column;
+    background-color: #0a5f38;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  /* 'active' class added by javascript for the hamburger menu and items  */
+  .nav-menu.active {
+    left: 0;
+  }
+
+  /* Animates hamburger lines into an 'X' */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .grid-container {
+    /* Single column for mobile */
+    grid-template-columns: 1fr;
+  }
+}
