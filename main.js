@@ -1,17 +1,18 @@
 // Pathname titles for each page
 const PATHNAME_TITLES = {
     "/": "Välkommen",
-    "/index.html": "Välkommen",
-    "/book.html": "Boka",
-    "/find.html": "Hitta",
-    "/activities.html": "Aktiviteter",
+    "index.html": "Välkommen",
+    "book.html": "Boka",
+    "find.html": "Hitta",
+    "activities.html": "Aktiviteter",
 };
 
 const getPathnameTitle = (pathname) =>
     PATHNAME_TITLES[pathname] || "Okänd sida";
 
 // Get the current URL path (e.g., "/index.html")
-const currentPath = window.location.pathname;
+const url = new URL(window.location.href);
+const currentPath = url.pathname;
 
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
@@ -28,7 +29,7 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-navLinks.forEach(link => {    
+navLinks.forEach(link => {
     // Close menu when a link is clicked
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -36,9 +37,9 @@ navLinks.forEach(link => {
     });
 
     // If the link's href matches the current path
-    if (link.getAttribute('href') === currentPath || link.href === window.location.href) {
+    if (currentPath.endsWith(link.getAttribute('href')) || link.href === window.location.href) {
         link.setAttribute("aria-current", "page");
         // Set mobile current page header
-        mobileCurrentPageHeader.innerText = getPathnameTitle(currentPath);
+        mobileCurrentPageHeader.innerText = getPathnameTitle(link.getAttribute('href'));
     }
 });
