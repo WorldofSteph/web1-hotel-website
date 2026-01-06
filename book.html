@@ -1,121 +1,93 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Skogshotellet - Boka din vistelse">
-    <title>Skogshotellet - Boka</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="header">
-        <img class="logo" src="gallery/logo.webp" alt="Skogshotellet logo" />
-      </div>
-      <nav class="navbar">
-        <h1 id="mobile-current-page-header"></h1>
 
-        <button class="hamburger" id="hamburger" aria-label="Hamburger menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Skogshotellet - Boka din vistelse">
+  <title>Skogshotellet - Boka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-        <ul class="nav-menu" id="nav-menu">
-          <li><a class="navbar-link" href="index.html">Välkommen</a></li>
-          <li><a class="navbar-link" href="book.html">Boka</a></li>
-          <li><a class="navbar-link" href="find.html">Hitta</a></li>
-          <li>
-            <a class="navbar-link" href="activities.html">Aktiviteter</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<body>
+  <header>
+    <div class="header">
+      <img class="logo" src="gallery/logo.webp" alt="Skogshotellet logo">
+    </div>
+    <nav class="navbar">
+      <h1 id="mobile-current-page-header">&nbsp;</h1>
 
-    <main class="main">
-      <section class="article">
-        <h1 class="article-header">Boka</h1>
-        <form class="form">
-          <div class="form-row">
-            <label for="fname" class="form-label">Förnamn</label>
-            <input
-              type="text"
-              id="fname"
-              name="firstname"
-              placeholder="Ditt förnamn..."
-              class="form-input"
-              required
-            />
-          </div>
-          <div class="form-row">
-            <label for="lname" class="form-label">Efternamn</label>
+      <button class="hamburger" id="hamburger" aria-label="Hamburger menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-            <input
-              type="text"
-              id="lname"
-              name="lastname"
-              placeholder="Ditt efterman..."
-              class="form-input"
-              required
-            />
-          </div>
-          <div class="form-row">
-            <label class="form-label" for="telephone">Telenr</label>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="navbar-link" href="index.html">Välkommen</a></li>
+        <li><a class="navbar-link" href="book.html">Boka</a></li>
+        <li><a class="navbar-link" href="find.html">Hitta</a></li>
+        <li>
+          <a class="navbar-link" href="activities.html">Aktiviteter</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-            <input
-              type="text"
-              id="telephone"
-              name="telephone"
-              placeholder="Ditt telefonnummer..."
-              class="form-input"
-              required
-            />
-          </div>
-          <div class="form-row">
-            <label class="form-label" for="email">Email</label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Din epost..."
-              class="form-input"
-              required
-            />
-          </div>
-          <div class="form-row">
-            <label class="form-label">Rumstyp</label>
-            <select id="typeroom" name="typeroom" class="form-input">
-              <option value="enkel">Enkelrum</option>
-              <option value="dubbel">Dubbelrum</option>
-              <option value="suit">Suit</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label class="form-label" for="subject">Övrigt</label>
-            <textarea
-              id="subject"
-              name="subject"
-              placeholder="Övrig info..."
-              class="form-textarea"
-            ></textarea>
-          </div>
-          <div class="form-row-right">
-            <input type="submit" class="form-submit" value="Skicka" />
-          </div>
-        </form>
-      </section>
-      <section class="article">
-        <ul class="article-list">
-            <li class="article-list-item">Någon information 1</li>
-            <li class="article-list-item">Någon information 2</li>
-        </ul>
-      </section>
-    </main>
+  <main class="main">
+    <section class="article">
+      <h2 class="article-header">Boka</h2>
+      <form class="form">
+        <div class="form-row">
+          <label for="fname" class="form-label">Förnamn</label>
+          <input type="text" id="fname" name="firstname" placeholder="Ditt förnamn..." class="form-input" required>
+        </div>
+        <div class="form-row">
+          <label for="lname" class="form-label">Efternamn</label>
 
-    <footer class="footer">
-      <p>Skogshotellet | Skogsgatan 1 | 123 45 Nästgårds | 012 - 12 34 56</p>
-    </footer>
+          <input type="text" id="lname" name="lastname" placeholder="Ditt efterman..." class="form-input" required>
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="telephone">Telenr</label>
 
-    <script src="main.js"></script>
-  </body>
+          <input type="text" id="telephone" name="telephone" placeholder="Ditt telefonnummer..." class="form-input"
+            required>
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Din epost..." class="form-input" required>
+        </div>
+        <div class="form-row">
+          <label class="form-label">Rumstyp</label>
+          <select id="typeroom" name="typeroom" class="form-input">
+            <option value="enkel">Enkelrum</option>
+            <option value="dubbel">Dubbelrum</option>
+            <option value="suit">Suit</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="subject">Övrigt</label>
+          <textarea id="subject" name="subject" placeholder="Övrig info..." class="form-textarea"></textarea>
+        </div>
+        <div class="form-row-right">
+          <input type="submit" class="form-submit" value="Skicka">
+        </div>
+      </form>
+    </section>
+    <section class="article">
+      <h2 class="article-header">Information</h2>
+      <ul class="article-list">
+        <li class="article-list-item">Någon information 1</li>
+        <li class="article-list-item">Någon information 2</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Skogshotellet | Skogsgatan 1 | 123 45 Nästgårds | 012 - 12 34 56</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
 </html>
