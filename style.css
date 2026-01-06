@@ -126,9 +126,6 @@
   align-items: center;
 }
 
-.form {
-}
-
 .form-row {
   display: flex;
   align-items: center;
@@ -149,20 +146,13 @@
 .form-input {
   flex: 1;
   height: 2.5rem;
-}
-
-.form-select {
-  /* For Safari */
-  -webkit-appearance: none;
-  appearance: none;
-  
-  flex: 1;
-  height: 2.5rem;
+  padding: 0.75rem;
 }
 
 .form-textarea {
   height: 12.5rem;
   flex: 1;
+  padding: 0.75rem;
 }
 
 .form-submit {
